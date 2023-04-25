@@ -1,7 +1,7 @@
-SET NAMES 'latin1';
+SET NAMES 'utf8';
 DROP DATABASE IF EXISTS sepomex_mega;
 
-CREATE DATABASE IF NOT EXISTS sepomex_mega DEFAULT CHARACTER SET 'utf8' COLLATE 'UTF8mb3_spanish_ci';
+CREATE DATABASE IF NOT EXISTS sepomex_mega DEFAULT CHARACTER SET 'utf8';
 USE sepomex_mega;
 CREATE TABLE sepomex(
 	
@@ -22,8 +22,8 @@ CREATE TABLE sepomex(
 	c_cve_ciudad			VARCHAR(3) NULL COMMENT ''
 	
 
-)DEFAULT CHARACTER SET utf8 COLLATE 'UTF8mb3_spanish_ci';
+)DEFAULT CHARACTER SET utf8;
 
 
-LOAD DATA LOCAL infile "CPdescarga.txt" INTO TABLE sepomex
+LOAD DATA LOCAL infile "CPdescarga2.txt" INTO TABLE sepomex
 CHARACTER SET UTF8 fields terminated BY '|' lines terminated BY '\r\n';

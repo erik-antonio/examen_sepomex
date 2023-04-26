@@ -17,8 +17,6 @@ CREATE TABLE municipios(
     nombre              VARCHAR(45) NOT NULL UNIQUE,
     id_ets              TINYINT UNSIGNED NOT NULL,
 
-    CONSTRAINT nombre_sin_numeros CHECK (nombre REGEXP '^[^0-9]+$'),
-
     PRIMARY KEY(id_mns),
     FOREIGN KEY(id_ets) REFERENCES estados(id_ets)
 )DEFAULT CHARACTER SET utf8;
@@ -26,8 +24,6 @@ CREATE TABLE municipios(
 CREATE TABLE ciudades(
     id_cus              SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
     nombre              VARCHAR(45) NOT NULL UNIQUE,
-
-    CONSTRAINT nombre_sin_numeros CHECK (nombre REGEXP '^[^0-9]+$'),
 
     PRIMARY KEY(id_cus)
 )DEFAULT CHARACTER SET utf8;

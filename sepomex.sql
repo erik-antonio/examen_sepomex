@@ -45,7 +45,7 @@ CREATE TABLE tipos(
 )DEFAULT CHARACTER SET utf8;
 
 CREATE TABLE asentamientos(
-    cp                  VARCHAR   (45) NOT NULL,
+    cp                  VARCHAR(45) NOT NULL,
     nombre              VARCHAR(145) BINARY NOT NULL,
     id_tps              TINYINT UNSIGNED NOT NULL,
     id_mns              SMALLINT UNSIGNED NOT NULL,
